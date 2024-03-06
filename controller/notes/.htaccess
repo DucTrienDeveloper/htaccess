@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteRule ^(.+)$ list.php [L,QSA]
-
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.webp|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js|\.pdf)$   
+RewriteRule ([^/]+)/([0-9]+)$ list.php?hovaten=$1&id=$2 [L]
 
 ErrorDocument 404 not_found.html
