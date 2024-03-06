@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteRule ^(.+)$ list.php?hovaten=$1 [L,QSA]
+RewriteRule ^(.+)$ list.php [L,QSA]
 
 
 ErrorDocument 404 not_found.html
